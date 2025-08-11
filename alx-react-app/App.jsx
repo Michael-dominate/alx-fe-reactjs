@@ -1,3 +1,4 @@
+import { greetings, showWelcome } from './welcome';
 import WelcomeMessage from './components/WelcomeMessage';  // Add this import at the top
 
 function App() {
@@ -10,3 +11,12 @@ function App() {
 }
 
 export default App;
+function App() {
+  return (
+    <div className="App">
+      <p>{showWelcome()}</p>
+      <p>Today is: {greetings.currentDate()}</p>
+      <WelcomeMessage />
+    </div>
+  );
+}
